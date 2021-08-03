@@ -2,7 +2,7 @@ import React from "react";
 import { AuthProvider } from "../contexts/AuthContext";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
-import Navbar from "./Navbar";
+import Navbar from "./layout/Navbar";
 import Home from "./pages/Home";
 import Nutrition from "./pages/Nutrition";
 import Workouts from "./pages/Workouts";
