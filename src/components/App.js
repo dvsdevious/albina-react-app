@@ -17,15 +17,13 @@ function App() {
   return (
     <>
       <Router>
-        <div>
-          <Navbar />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/workouts" component={Workouts} />
-            <Route path="/nutrition" component={Nutrition} />
-            <Route path="/faqs" component={FAQs} />
-          </Switch>
-        </div>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/workouts" component={Workouts} />
+          <Route path="/nutrition" component={Nutrition} />
+          <Route path="/faqs" component={FAQs} />
+        </Switch>
         <AuthProvider>
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
