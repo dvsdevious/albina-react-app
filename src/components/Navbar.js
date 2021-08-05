@@ -66,7 +66,6 @@ function Navbar() {
           <li className="nav-item">
             <Profile closeMobileMenu={closeMobileMenu} />
           </li>
-
           <li>
             <Link
               to="/signup"

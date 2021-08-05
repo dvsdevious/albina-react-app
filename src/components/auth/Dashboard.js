@@ -20,6 +20,8 @@ export default function Dashboard() {
   }
   return (
     <>
+      <h1>Hello!</h1>
+
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Profile</h2>

@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/nutrition.css";
 
 function Nutrition() {
   return (

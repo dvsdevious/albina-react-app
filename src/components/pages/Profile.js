@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 
 const profileStyles = { height: "100%", display: "flex", flexDirection: "row" };
 const profilePhotoStyles = {
@@ -10,10 +10,6 @@ const profilePhotoStyles = {
   margin: "auto",
 };
 
-/*
- The Profile component handles selecting whether to show the login or logout link.
- Yuo can rename this component and adjust styles as you like.
- */
 function Profile({ closeMobileMenu }) {
   const { currentUser, logout } = useAuth();
 
@@ -26,7 +22,9 @@ function Profile({ closeMobileMenu }) {
   if (currentUser) {
     return (
       <div style={profileStyles}>
-        <img src={profilePhotoSrc} alt="profile" style={profilePhotoStyles} />
+        <Link to="/dashboard">
+          <img src={profilePhotoSrc} alt="profile" style={profilePhotoStyles} />
+        </Link>
         <Link className="nav-links" onClick={logoutHandler}>
           Logout
         </Link>
