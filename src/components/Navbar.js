@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext"
 import { Button } from "./Button";
 import "./Navbar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  /*
+  In this commit, since Navbar is not wrapped by an AuthProvider,
+  trying to access the authContext like this will throw an error
+  (see src/contexts/AuthContext.js line 14)
+  */
+  const { currentUser, logout } = useAuth()
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
