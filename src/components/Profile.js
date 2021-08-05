@@ -21,7 +21,7 @@ function Profile({ closeMobileMenu }) {
     if (currentUser) {
         return (
             <div style={profileStyles}>
-                <img src={profilePhotoSrc} alt="profile picture" style={profilePhotoStyles} />
+                <img src={profilePhotoSrc} alt="profile" style={profilePhotoStyles} />
                 <Link className="nav-links" onClick={logoutHandler}>Logout</Link>
             </div>
         )
