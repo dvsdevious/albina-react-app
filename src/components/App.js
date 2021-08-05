@@ -14,17 +14,22 @@ import ForgotPassword from "./auth/ForgotPassword";
 import UpdateProfile from "./auth/UpdateProfile";
 
 function App() {
+  /*
+  This commit adjusts the AuthProvier so that it also wraps the Navbar component.
+  This enables the Navbar to access the auth context,
+  and prevents the "Auth context must be used inside an AuthProvider" error.
+  */
   return (
     <>
       <Router>
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/workouts" component={Workouts} />
-          <Route path="/nutrition" component={Nutrition} />
-          <Route path="/faqs" component={FAQs} />
-        </Switch>
         <AuthProvider>
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/workouts" component={Workouts} />
+            <Route path="/nutrition" component={Nutrition} />
+            <Route path="/faqs" component={FAQs} />
+          </Switch>
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <PrivateRoute
