@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
+import Profile from './Profile'
 import "./Navbar.css";
 
 function Navbar() {
@@ -63,9 +64,12 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
-              Login
-            </Link>
+            {/*
+            In this commit, the logic to handle rendering a login or logout button
+            is moved to the Profile component.
+            The Navbar no longer needs to useAuth(). 
+            */}
+            <Profile closeMobileMenu={closeMobileMenu} />
           </li>
 
           <li>
