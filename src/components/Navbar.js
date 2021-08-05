@@ -13,6 +13,14 @@ function Navbar() {
   So, no errors anymore. 
   */
   const { currentUser, logout } = useAuth()
+  /*
+  Take a look at the currentUser object in console.
+  There's a property called photoUrl.
+  For me it is null, but if I had a profile picture
+  it should point to that.
+  It also has things like displayName, and email.
+  */
+  console.log(currentUser)
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -70,9 +78,16 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
+            {/*
+            If currentUser is defined, show the profile picture and a logout link.
+            Otherwise, show the login link.
+            */}
+            {currentUser ? <div style={{ height: '100%', display: 'flex', flexDirection: 'row', }}><img src={currentUser.photoUrl ?? 'img/profile.png'} alt="profile picture" height="25" width="25" style={{ borderRadius: '50%', margin: 'auto' }} /><Link className="nav-links" onClick={() => {
+              closeMobileMenu()
+              logout()
+            }}>Logout</Link></div> : <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
               Login
-            </Link>
+            </Link>}
           </li>
 
           <li>
