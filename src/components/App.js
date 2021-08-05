@@ -17,14 +17,14 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/workouts" component={Workouts} />
-          <Route path="/nutrition" component={Nutrition} />
-          <Route path="/faqs" component={FAQs} />
-        </Switch>
         <AuthProvider>
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/workouts" component={Workouts} />
+            <Route path="/nutrition" component={Nutrition} />
+            <Route path="/faqs" component={FAQs} />
+          </Switch>
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <PrivateRoute
