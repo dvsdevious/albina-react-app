@@ -4,7 +4,16 @@ import { auth } from "../firebase";
 const AuthContext = React.createContext();
 
 export const useAuth = () => {
-  return useContext(AuthContext);
+  /*
+  This is an enhancement so that if you accidentally try to access
+  this context outside of an <AuthContext.Provider/> component
+  you will at least get a helpful error to explain what the problem is
+  */
+  const context = useContext(AuthContext)
+  if (context === undefined) {
+    throw new Error('Auth context must be used inside an AuthProvider')
+  }
+  return context;
 };
 
 export const AuthProvider = ({ children }) => {
