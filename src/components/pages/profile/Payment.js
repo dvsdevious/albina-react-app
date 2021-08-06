@@ -1,10 +1,14 @@
 import React from "react";
+import Sidebar from "./Sidebar";
 
 function Payment() {
   return (
-    <div className="payment">
-      <h1>Pay Here</h1>
-    </div>
+    <>
+      <Sidebar />
+      <div className="payment">
+        <h1>Pay Here</h1>
+      </div>
+    </>
   );
 }
 

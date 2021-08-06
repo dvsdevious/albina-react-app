@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import styled from "styled-components";
 
 export default function Login() {
   const emailRef = useRef();
@@ -10,6 +11,12 @@ export default function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState("");
   const history = useHistory();
+  const StyledCard = styled.div`
+    width: 500px;
+    display: flex;
+    align-items: center;
+    margin-left: 30%;
+  `;
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -26,7 +33,7 @@ export default function Login() {
   }
   return (
     <>
-      <Card>
+      <StyledCard>
         <Card.Body>
           <h2 className="text-center mb-4">Login</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -47,7 +54,7 @@ export default function Login() {
             <Link to="/forgot-password">Forgot Password?</Link>
           </div>
         </Card.Body>
-      </Card>
+      </StyledCard>
       <div className="w-100 text-center mt-2">
         Need an account? <Link to="/signup"> Sign Up </Link>
       </div>

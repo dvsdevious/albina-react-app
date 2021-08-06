@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 import Navbar from "./Navbar";
 
-import Sidebar from "./pages/Profile Page/Sidebar";
 import Home from "./pages/Home Page/Home";
 
 import Nutrition from "./pages/Nutrition";
@@ -32,7 +31,6 @@ function App() {
             <Route path="/nutrition" component={Nutrition} />
             <Route path="/faqs" component={FAQs} />
           </Switch>
-          <Sidebar />
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <PrivateRoute exact path="/usersettings" component={UserSettings} />

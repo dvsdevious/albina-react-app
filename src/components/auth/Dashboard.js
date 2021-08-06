@@ -1,11 +1,9 @@
 import React from "react";
-
+import Sidebar from "../pages/profile/Sidebar";
 function Dashboard() {
   return (
     <>
-      <div className="dashboard">
-        <h1>Hello!</h1>
-      </div>
+      <Sidebar />
     </>
   );
 }

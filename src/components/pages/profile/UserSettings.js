@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import { Card, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import styled from "styled-components";
+import Sidebar from "./Sidebar";
 
 export default function UserSettings() {
   const [error, setError] = useState("");
   const { currentUser, logout } = useAuth();
   const history = useHistory();
+  const StyledCard = styled.div`
+    width: 500px;
+    display: flex;
+    align-items: center;
+    margin-left: 30%;
+  `;
 
   async function handleLogout() {
     setError("");
@@ -20,9 +28,9 @@ export default function UserSettings() {
   }
   return (
     <>
-      <h1>Hello!</h1>
       <div className="userSettings">
-        <Card>
+        <Sidebar />
+        <StyledCard>
           <Card.Body>
             <h2 className="text-center mb-4">Profile</h2>
             {error && <Alert variant="danger">{error}</Alert>}
@@ -32,7 +40,7 @@ export default function UserSettings() {
               Update Profile
             </Link>
           </Card.Body>
-        </Card>
+        </StyledCard>
         <div className="w-100 text-center mt-2">
           <Button variant="link" onClick={handleLogout}>
             Log Out

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import styled from "styled-components";
 
 export default function UpdateProfile() {
   const emailRef = useRef();
@@ -11,6 +12,12 @@ export default function UpdateProfile() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+  const StyledCard = styled.div`
+    width: 500px;
+    display: flex;
+    align-items: center;
+    margin-left: 30%;
+  `;
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -39,7 +46,7 @@ export default function UpdateProfile() {
   }
   return (
     <>
-      <Card>
+      <StyledCard>
         <Card.Body>
           <h2 className="text-center mb-4">Update Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -74,7 +81,7 @@ export default function UpdateProfile() {
             </Button>
           </Form>
         </Card.Body>
-      </Card>
+      </StyledCard>
       <div className="w-100 text-center mt-2">
         <Link to="/">Cancel</Link>
       </div>
