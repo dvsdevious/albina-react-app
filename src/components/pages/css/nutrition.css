@@ -17,28 +17,3 @@
   font-weight: 900;
   line-height: 1.2;
 }
-/* WORKOUT PAGE */
-
-.banner-area-workouts {
-  width: 100%;
-  height: 100vh;
-  background-image: url("../media/Workouts.jpg");
-  background-size: cover;
-}
-.content-area-workouts {
-  height: 100%;
-}
-.content-workouts {
-  max-width: 60%;
-  padding: 80px 250px 60px 200px;
-  float: left;
-}
-.content-workouts h1 {
-  font-size: 80px;
-  color: white;
-  font-weight: 900;
-  line-height: 1.2;
-}
-.content-workouts p {
-  color: aliceblue;
-}

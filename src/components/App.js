@@ -3,12 +3,19 @@ import { AuthProvider } from "../contexts/AuthContext";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 import Navbar from "./Navbar";
-import Home from "./pages/Home";
+
+import Sidebar from "./pages/Profile Page/Sidebar";
+import Home from "./pages/Home Page/Home";
+
 import Nutrition from "./pages/Nutrition";
 import Workouts from "./pages/Workouts";
 import FAQs from "./pages/FAQs";
 import Signup from "./auth/Signup";
+
 import Dashboard from "./auth/Dashboard";
+import Payment from "./pages/profile/Payment";
+import Training from "./pages/profile/Training";
+import UserSettings from "./pages/profile/UserSettings";
 import Login from "./auth/Login";
 import ForgotPassword from "./auth/ForgotPassword";
 import UpdateProfile from "./auth/UpdateProfile";
@@ -25,8 +32,12 @@ function App() {
             <Route path="/nutrition" component={Nutrition} />
             <Route path="/faqs" component={FAQs} />
           </Switch>
+          <Sidebar />
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            <PrivateRoute exact path="/usersettings" component={UserSettings} />
+            <PrivateRoute exact path="/payment" component={Payment} />
+            <PrivateRoute exact path="/training" component={Training} />
             <PrivateRoute
               exact
               path="/update-profile"

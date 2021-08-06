@@ -5,7 +5,7 @@ import "./MainSection.css";
 function MainSection() {
   return (
     <div className="main-container">
-      <img src="/img/coverphoto.png" alt="" width="150" />
+      <img src="/img/mainphoto.jpg" alt="" />
     </div>
   );
 }

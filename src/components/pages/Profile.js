@@ -4,10 +4,11 @@ import { useAuth } from "../../contexts/AuthContext";
 
 const profileStyles = { height: "100%", display: "flex", flexDirection: "row" };
 const profilePhotoStyles = {
-  height: "30px",
-  width: "30px",
-  borderRadius: "50%",
-  margin: "auto",
+  height: "40px",
+  width: "40px",
+  padding: "5px",
+  marginTop: "4vh",
+  alignSelf: "center",
 };
 
 function Profile({ closeMobileMenu }) {
