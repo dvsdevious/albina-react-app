@@ -1,11 +1,19 @@
 import React from "react";
 import "./AboutMe.css";
+import styled from "styled-components";
+
+const AboutMeContainer = styled.div`
+  display: flex;
+  align-items: right;
+  width: 50%;
+  z-index: 5;
+`;
 
 function aboutmeSection() {
   return (
-    <div class="container-aboutme">
+    <>
       <img src="/img/about.jpg" alt="" width="500px" />
-      <div class="box">
+      <AboutMeContainer>
         <h2>About Me</h2>
 
         <p>
@@ -17,8 +25,8 @@ function aboutmeSection() {
           iusto quia, porro eius animi fugit mollitia nobis assumenda obcaecati
           expedita fuga quae error. Quibusdam, expedita.
         </p>
-      </div>
-    </div>
+      </AboutMeContainer>
+    </>
   );
 }
 
