@@ -4,9 +4,15 @@ import * as GiIcons from "react-icons/gi";
 
 export const SidebarData = [
   {
-    title: "UserSettings",
-    path: "/usersettings",
-    icon: <FaIcons.FaUserCog />,
+    title: "Dashboard",
+    path: "/dashboard",
+    icon: <FaIcons.FaUserAlt />,
+    cName: "side-text",
+  },
+  {
+    title: "Calendar",
+    path: "/calendar",
+    icon: <GiIcons.GiCalendar />,
     cName: "side-text",
   },
   {
@@ -19,6 +25,12 @@ export const SidebarData = [
     title: "Payment",
     path: "/payment",
     icon: <FaIcons.FaCoins />,
+    cName: "side-text",
+  },
+  {
+    title: "UserSettings",
+    path: "/usersettings",
+    icon: <FaIcons.FaUserCog />,
     cName: "side-text",
   },
 ];

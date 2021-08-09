@@ -12,6 +12,7 @@ import FAQs from "./pages/FAQs";
 import Signup from "./auth/Signup";
 
 import Dashboard from "./auth/Dashboard";
+import Calendar from "./pages/profile/Calendar";
 import Payment from "./pages/profile/Payment";
 import Training from "./pages/profile/Training";
 import UserSettings from "./pages/profile/UserSettings";
@@ -35,6 +36,7 @@ function App() {
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <PrivateRoute exact path="/usersettings" component={UserSettings} />
             <PrivateRoute exact path="/payment" component={Payment} />
+            <PrivateRoute exact path="/calendar" component={Calendar} />
             <PrivateRoute exact path="/training" component={Training} />
             <PrivateRoute
               exact
