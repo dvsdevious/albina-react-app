@@ -8,7 +8,6 @@ import Home from "./pages/Home Page/Home";
 
 import Nutrition from "./pages/Nutrition";
 import Workouts from "./pages/Workouts";
-import FAQs from "./pages/FAQs";
 import Signup from "./auth/Signup";
 
 import Dashboard from "./auth/Dashboard";
@@ -30,7 +29,6 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/workouts" component={Workouts} />
             <Route path="/nutrition" component={Nutrition} />
-            <Route path="/faqs" component={FAQs} />
           </Switch>
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
