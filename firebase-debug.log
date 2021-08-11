@@ -1,0 +1,24 @@
+[debug] [2021-08-11T14:27:28.699Z] ----------------------------------------------------------------------
+[debug] [2021-08-11T14:27:28.702Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2021-08-11T14:27:28.702Z] CLI Version:   9.16.0
+[debug] [2021-08-11T14:27:28.702Z] Platform:      darwin
+[debug] [2021-08-11T14:27:28.702Z] Node Version:  v14.17.3
+[debug] [2021-08-11T14:27:28.704Z] Time:          Wed Aug 11 2021 16:27:28 GMT+0200 (Central European Summer Time)
+[debug] [2021-08-11T14:27:28.704Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-11T14:27:28.706Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-08-11T14:27:28.733Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-11T14:27:28.734Z] > authorizing via signed-in user (daria.sheremeteva@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/daraseremeteva/Desktop/Albina Project/albina-react-app
+
+[debug] [2021-08-11T14:27:29.219Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-08-11T14:27:29.220Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
