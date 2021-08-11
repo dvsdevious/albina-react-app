@@ -1,14 +1,19 @@
 import React from "react";
+import styled from "styled-components";
+
+const MainImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+`;
 
 function Workouts() {
   return (
     <>
-      <div className="main-container">
-        <img src="/img/workouts.jpg" alt="" height="100%" />
-      </div>
-      <div>
-        <h1>Workouts Page</h1>
-      </div>
+      <MainImage src="/img/workoutsmain.jpg" alt="" />
     </>
   );
 }

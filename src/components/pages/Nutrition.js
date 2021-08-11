@@ -1,15 +1,20 @@
 import React from "react";
 import "./css/nutrition.css";
+import styled from "styled-components";
+
+const MainImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+`;
 
 function Nutrition() {
   return (
     <>
-      <div className="main-container">
-        <img src="/img/nutrition.jpg" alt="" />
-      </div>
-      <div>
-        <h1>Nutrition Page</h1>
-      </div>
+      <MainImage src="/img/nutrition.jpg" alt="" />
     </>
   );
 }
