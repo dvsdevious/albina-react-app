@@ -75,11 +75,6 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/faqs" className="nav-links" onClick={closeMobileMenu}>
-                FAQ's
-              </Link>
-            </li>
-            <li className="nav-item">
               <Profile closeMobileMenu={closeMobileMenu} />
             </li>
             <li>
